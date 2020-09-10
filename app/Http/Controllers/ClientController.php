@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
+use MercurySeries\Flashy\Flashy;
+use App\Http\Requests\ClientsForm;
 
 class ClientController extends Controller
 {
@@ -14,7 +16,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -24,7 +26,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.create');
     }
 
     /**
@@ -33,9 +35,21 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClientsForm $request)
     {
-        //
+       
+        $clients = Client::create([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'age'=>$request->age,
+            'email'=>$request->email,
+
+        ]);
+
+        Flashy::success('Customer register with success');
+        return back();
+
+
     }
 
     /**

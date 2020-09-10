@@ -237,11 +237,11 @@ return [
             'text' => 'Home',
             'url' => '/',
             'icon'=>'fa fa-home',
-            'target' => '_blank',
+            //'target' => '_blank',
         ],
         [
-            'text' => 'Elhadji Client',
-            'url' => 'admin/pages',
+            'text' => 'New clients',
+            'url' => 'clients/create',
             'icon' => 'fas fa-user-plus',
         ],
         

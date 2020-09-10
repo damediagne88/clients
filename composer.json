@@ -15,7 +15,9 @@
         "jeroennoten/laravel-adminlte": "^3.4",
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.3"
+        "laravel/ui": "^2.3",
+        "mercuryseries/flashy": "^1.0",
+        "mercuryseries/flashy-bundle": "^3.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
